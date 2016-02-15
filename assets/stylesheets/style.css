@@ -1,4 +1,92 @@
+body{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
 .prof_view
 {
 	padding-left: 10px;
+}
+#header
+{
+	    height: 50px;
+    background-color: rgb(44, 55, 66);
+}
+.logo
+{
+	padding: 5px;
+}
+.qlogo
+{
+	height: 40px;
+}
+.side_bar
+{
+	height: 400px;
+    width: 57px;
+    float: left;
+}
+
+.side_item img
+{
+	height: 30px;
+	margin-left: -33px
+}
+.side_item
+{
+	margin-top: 25px;
+	list-style: none;
+}
+#prof_header
+{
+	height: 186px;
+	margin-left: 57px;
+}
+#basic
+{    
+	margin-left: 10px;
+	height: 200px;
+    width: 342px;
+}
+.usr_img
+{
+	width: 70px;
+    height: 95px;
+}
+.bas_img
+{
+	float: left;
+	margin-top: 14px;}
+.usr_desc
+{
+
+   height: 105px;
+    float: left;
+    width: 228px;	
+}
+h4
+{
+	margin-bottom: -13px;
+
+}
+label
+{
+	font-size: 12px;
+}
+.label_view
+{
+	margin-top: -138px;
+    float: right;
+    margin-right: 35px;
+}
+.edit
+{
+	float: right;
+    margin-right: 35px;
+    margin-top: -56px;
+}
+#profile
+{
+	    margin-left: 76px;
+
 }

@@ -4,17 +4,61 @@
         <title>
             sample
         </title>
-<link rel="stylesheet" type="text/css" href="../assets/stylesheets/style.css">
+        <link rel="stylesheet" type="text/css" href="../assets/stylesheets/style.css"/>
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
         </script>
     </head>
     <body>
-        <div ng-app="myApp" ng-controller="customersCtrl">
+        <div ng-app="myApp" ng-controller="profileCtrl">
+            <header id ="header">
+                <div class="logo">
+                    <img class ="qlogo" src="../assets/images/qlogo.png"/>
+                </div>
+            </header>
+            <div class="side_bar">
+            	<ul>
+            	<li class = "side_item">
+            		<img class ="user" src="../assets/images/profile.png"/>
+            	</li>
+            	<li class = "side_item">
+            		<img class ="home" src="../assets/images/home.png"/>
+            	</li>
+            	<li class = "side_item">
+            		<img class ="employee" src="../assets/images/employee.png"/>
+
+            	</li>
+
+            </div>
+            <div ng-repeat="item in names" >
+            <div id ="prof_header">
+            <div id ="basic" >
+            <div class="bas_img">
+            <img class ="usr_img" src="../assets/images/profile.png"/>            
+            </div>
+            <div class ="usr_desc">
+              <h4 class = "usr_name">{{arra[0]}}</h4><br> 
+
+              <label>{{arra[1]}}</label><br clear="all">
+
+              <label>{{arra[2]}}</label><br>
+
+              <label>{{arra[3]}}</label><br>
+
+              <label>{{arra[4]}}</label><br>
+
+
+
+            </div>	
+            </div>
+            <a class = "label_view" href="#"> View public profile </a> 
+             <a class = "edit" href="#">edit</a> 
+
+            </div>
             <div id ="profile">
                 <h2>
                     My profile
                 </h2>
-                <table ng-repeat="item in names"  >
+                <table ng-repeat="item in names">
                     <tr>
                         <th>
                             Basic Information
@@ -22,7 +66,7 @@
                     </tr>
                     <tr >
                         <td class ="prof_view">
-                           Name : {{item.name}}
+                            {{item.name}}
                         </td>
                         <td class ="prof_view">
                             Type : {{ item.type}}
@@ -33,7 +77,8 @@
                     </tr>
                 </table>
             </div>
+            <div >
         </div>
-        <script src ="../controllers/profilecontroller.js"></script>
+        <script src = "../controllers/profilecontroller.js"></script>
     </body>
 </html>
