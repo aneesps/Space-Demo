@@ -1,60 +1,110 @@
-body{
-	margin: 0;
+body {
+    margin: 0;
 }
-#content_wrapper{
-	width: 100%;
+
+a {
+    text-decoration: none;
 }
-#space_head{
-	background-color: #333;
-	height: 60px;
-	
+
+#content_wrapper {
+    width: 100%;
 }
-#logo{
-	margin-top:5px; 
+
+#space_head {
+    background-color: #333;
+    height: 60px;
 }
-#sign_out{
-	padding: 0 30px;
-	height: 10px;
+
+#logo {
+    margin-top: 5px;
 }
-.unstyled{
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
+
+#sign_out {
+    padding: 0 30px;
+    height: 10px;
 }
-.right_side{
-	float: right;
+
+.unstyled {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
-.head_items{
-	display: inline;
-	margin: 17px 0px;
+
+.right_side {
+    float: right;
 }
-.head_icon{
-	color: #fff;
-	margin-top: 6px;
+
+.head_items {
+    display: inline;
+    margin: 17px 0px;
 }
-#search_box{
-	margin-left: 5px;
-	background-color: #000;
-	padding:0px 3px;
+
+.head_icon {
+    color: #fff;
+    margin-top: 6px;
 }
-#search_items{
-	padding: 5px;
-	width: 150px;
-	background-color: #000;
-	color: #fff;
+
+#search_box {
+    margin-left: 5px;
+    background-color: #000;
+    padding: 0px 3px;
 }
-#head_search_field{
-	padding: 7px;
-	background-color: #000;
-	border: none;
-	outline: none;
-	color: #fff;
+
+#search_items {
+    padding: 5px;
+    width: 150px;
+    background-color: #000;
+    color: #fff;
 }
-#profile_pic{
-	display: inline-block;
-	width: 30px;
-	height: 30px;
+
+#head_search_field {
+    padding: 7px;
+    background-color: #000;
+    border: none;
+    outline: none;
+    color: #fff;
 }
-#profile_name{
-	display: inline-block;
+
+#nav_profile {
+    text-align: center;
+}
+
+#profile_pic {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 10px 25px 0 0;
+}
+
+#profile_name {
+    display: inline-block;
+}
+
+#nav_menu {
+    width: 200px;
+    border-right: 2px solid black;
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    color: #5D5C5C;
+}
+
+.nav_item {
+    height: 40px;
+    color: #ACA8A8;
+    text-align: left;
+    color: #5D5C5C;
+    
+    padding-top: 10px;
+}
+
+.nav_item a {
+    color: #5D5C5C;
+}
+
+.nav_icon {
+    color: #5D5C5C;
+    padding: 0 10px;
+    width: 30px;
+    height: 30px;
 }
