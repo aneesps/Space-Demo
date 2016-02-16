@@ -5,7 +5,8 @@ body{
 }
 .prof_view
 {
-	padding-left: 10px;
+	    padding-left: 100px;
+        padding-top: 14px;
 }
 #header
 {
@@ -64,13 +65,14 @@ body{
     float: left;
     width: 228px;	
 }
-h4
+.usr_name
 {
-	margin-bottom: -13px;
-
+	margin-top: 21px;
+    margin-bottom: 8px;
 }
-label
+.lab
 {
+	margin-bottom: 0;
 	font-size: 12px;
 }
 .label_view
@@ -88,5 +90,17 @@ label
 #profile
 {
 	    margin-left: 76px;
-
+	    margin-top: -157px;
+	    border: 2px solid aqua;
+	    padding: 9px;
+	    width: 1095px;
+}
+#container
+{
+	margin-left: 23px;
+}
+.tab_head
+{
+	color: #6E7995;
+    font-weight: bold;
 }

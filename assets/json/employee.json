@@ -4,5 +4,8 @@
         "type" : "Trainee",
         "status":"Probabtion",
         "mode":"Fulltime",
-        "grade":"A"
+        "grade":"A",
+        "designation":"intern",
+        "department" :"Devolepment",
+        "joiningdate":"07/12/2015 "
 }]

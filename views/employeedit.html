@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            sample
+        </title>
+       <link rel="stylesheet" type="text/css" href="../assets/stylesheets/style1.css"/>
+       <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+       <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.     css">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+       <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    </head>
+
+     <body ng-app="myApp" ng-controller="profileCtrl">
+        <div id = "emp_edit" ng-repeat="item in names">
+
+            <h4>{{ item.name}}</h4>
+           <div id = "emp_fill">
+           <form ng-submit="submit()" name="edit_employee" id="edit" novalidate>
+              <h5>contact information</h5>
+              <table>
+              <tr>
+              <td>
+              Name
+              </td>
+              <td>
+              skype id
+              </td>
+              </tr>
+              <tr>
+              <td>
+              <input type="text" ng-model="emp_name" ng-required/>
+              </td>
+              <td>
+              <input type="text" ng-model="emp_skype_id" ng-required/>
+              </td>
+              </tr>
+              <tr>
+              <td>
+              Mobile#
+              </td>
+              <td>
+              Residence#
+              </td>
+              </tr>
+              <tr>
+              <td>
+              <input type="text" ng-model="emp_mobile_no" ng-required/>
+              </td>
+              <td>
+              <input type="text" ng-model="emp_residence_no" ng-required/>
+              </td>
+              </tr>
+              <tr>
+              <td>
+              Permanent Address
+              </td>
+              <td>
+              Current Address
+              </td>
+              </tr>
+              <tr>
+              <td>
+              <input type="text" ng-model="permanent_house_name" ng-required/>
+              </td>
+              <td>
+              <input type="text" ng-model="current_house_name" ng-required/>
+              </td>
+              </tr>
+              <tr>
+              <td>
+              <input type="text" ng-model="permanent_street_name" ng-required/>
+              </td>
+              <td>
+              <input type="text" ng-model="current_street_name" ng-required/>
+              </td>
+              </tr>
+              <tr>
+              <td>
+              <input type="text" ng-model="permanent_city" ng-required/>
+              </td>
+              <td>
+              <input type="text" ng-model="current_city" ng-required/>
+              </td>
+              </tr>
+              <tr>
+              <td>
+              <input type="text" ng-model="permanent_post_office" ng-required/>
+              </td>
+              <td>
+              <input type="text" ng-model="office_post_office" ng-required/>
+              </td>
+              </tr>
+              </table>
+         <h5>Family Details</h5>
+         <table>
+              <tr>
+              <td>
+             Father's Name
+              </td>
+              </tr>
+              <tr>
+              <td>
+              <input type="text" ng-model="father_name" ng-required/>
+              </td>
+              </tr>
+              <tr>
+              <td>
+              Mother's Name
+              </td>
+              </tr>
+              <tr>
+              <td>
+              <input type="text" ng-model="mother_name" ng-required/>
+              </td>
+              </tr>
+              <tr>
+              <td>
+              Spouse Name
+              </td>
+              <td>
+              Date of Birth
+              </td>
+              </tr>
+              <tr>
+              <td>
+              <input type="text" ng-model="spouse_name" ng-required />
+              </td>
+              <td>
+              <input type="text" ng-model="spouse_dob" ng-required placeholder="DD/MM/YY"/>
+              </td>
+              </tr>
+              <tr>
+              <td>
+              Child Name
+              </td>
+              <td>
+              Date of Birth
+              </td>
+              </tr>
+              <tr>
+              <td>
+              <input type="text" ng-model="child_name" ng-required/>
+              </td>
+              <td>
+              <input type="text" ng-model="child_dob" ng-required placeholder="DD/MM/YY"/>
+              </td>
+              </tr>
+         </table>
+         <h5>Other details</h5>
+         <table>
+             <tr>
+              <td>
+              Nationality
+              </td>
+              <td>
+              Date of Birth[official]
+              </td>
+              <td>
+              Date of Birth[Alternate]
+              </td>
+              <td>
+              Gender
+              </td>
+              <td>
+              Blood Group
+              </td>
+              </tr>
+            <tr>
+            <td>
+              <input type="text" ng-model="nationality" ng-required/>
+              </td>
+              <td>
+              <input type="text" ng-model="dob_official" ng-required placeholder="DD/MM/YY"/>
+              </td>
+              <td>
+              <input type="text" ng-model="dob_alternate" ng-required placeholder="DD/MM/YY"/>
+              </td>
+              <td>
+                  <select ng-model="gender" ng-options="item for item in genders" ng-required>
+                  </select>
+              </td>
+              <td>
+                  <select ng-model="blood_group" ng-options="item for item in blood_groups" ng-required>
+                  </select>
+              </td>
+              </tr>
+
+         </table>
+
+           <input type="submit" value="save" id="submitBtn">
+           <input type="submit" value="cancel" id="submitBtn">
+            </form>
+           </div>  
+        </div>
+
+    
+                  <script src = "../controllers/profilecontroller.js"></script>
+     </body>
+</html>
+
