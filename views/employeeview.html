@@ -1,1 +1,112 @@
-employees.html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            sample
+        </title>
+        <link rel="stylesheet" type="text/css" href="../assets/stylesheets/style.css"/>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+
+       </script>
+         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div ng-app="myApp" ng-controller="profileCtrl">
+            <header id ="header">
+                <div class="logo">
+                    <img class ="qlogo" src="../assets/images/qlogo.png"/>
+                </div>
+            </header>
+            <div class="side_bar">
+            	<ul>
+            	<li class = "side_item">
+            		<img class ="user" src="../assets/images/profile.png"/>
+            	</li>
+            	<li class = "side_item">
+            		<img class ="home" src="../assets/images/home.png"/>
+            	</li>
+            	<li class = "side_item">
+            		<img class ="employee" src="../assets/images/employee.png"/>
+
+            	</li>
+
+            </div>
+            <div ng-repeat="item in names" >
+            <div id ="prof_header">
+            <div id ="basic" >
+            <div class="bas_img">
+            <img class ="usr_img" src="../assets/images/profile.png"/>            
+            </div>
+            <div class ="usr_desc">
+              <h4 class = "usr_name">{{arra[0]}}</h4>
+
+              <label class = "lab" >{{arra[1]}}</label>
+
+              <label class = "lab">{{arra[2]}}</label>
+
+              <label class = "lab">{{arra[3]}}</label><br>
+
+              <label class = "lab">{{arra[4]}}</label>
+
+
+
+            </div>	
+            </div>
+            <a class = "label_view" href="#"> View public profile </a> 
+             <a class = "edit" href="#">edit</a> 
+            </div>
+            <div id ="container">
+            <ul class="nav nav-tabs">
+              <li class="active"><a data-toggle="tab" href="#profile">Profile</a></li>
+              <li><a data-toggle="tab" href="#skill">Skill</a></li>
+            </ul>
+            <div class="tab-content">
+             <div id="profile" class="tab-pane fade in active">
+             <h5 class = "tab_head"> Basic information </h5> 
+                 <table ng-repeat="item in names">
+                    
+                     <tr >
+                        <td class ="prof_view">
+                            <label class="tab_name">Name</label> : {{item.name}}
+                        </td>
+                        <td class ="prof_view">
+                          <label class="tab_name">Type</label> :  {{ item.type}}
+                        </td>
+                        <td class ="prof_view">
+                        <label class="tab_name">Status</label> :  {{ item.status}}
+                        </td>
+                        <td class ="prof_view">
+                        <label class="tab_name">Employment Mode</label> :  {{ item.mode}}
+                        </td>
+                    </tr>
+                     <tr >
+                        <td class ="prof_view">
+                            <label class="tab_name">Designation</label> : {{item.designation}}
+                        </td>
+                        <td class ="prof_view">
+                          <label class="tab_name">Department</label> :{{ item.department}}
+                        </td>
+                        <td class ="prof_view">
+                        <label class="tab_name">Grade</label> :  {{ item.grade}}
+                        </td>
+                        <td class ="prof_view">
+                        <label class="tab_name">Date</label> :  {{ item.joiningdate}}
+                        </td>
+                    </tr>
+                </table>
+
+                <h5 class = "tab_head"> Contact Information</h5>
+                <h5 class = "tab_head"> Other Information</h5>
+                <h5 class = "tab_head"> Family Details</h5>
+
+
+             </div>
+               <div id="skill" class="tab-pane fade">
+               </div>
+            </div>   
+        </div>
+        <script src = "../controllers/profilecontroller.js"></script>
+    </body>
+</html>
