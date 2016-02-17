@@ -6,15 +6,16 @@
         </title>
        <link rel="stylesheet" type="text/css" href="../assets/stylesheets/style1.css"/>
        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-       <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.     css">
+       <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     </head>
 
      <body ng-app="myApp" ng-controller="profileCtrl">
-        <div id = "emp_edit" ng-repeat="item in names">
+        <div id = "emp_edit">
 
-            <h4>{{ item.name}}</h4>
+            <h4>{{arra[0]}}</h4>
+         
            <div id = "emp_fill">
            <form ng-submit="submit()" name="edit_employee" id="edit" novalidate>
               <h5>contact information</h5>
@@ -29,7 +30,7 @@
               </tr>
               <tr>
               <td>
-              <input type="text" ng-model="emp_name" ng-required/>
+              <input type="text" ng-model="empname" ng-required/>
               </td>
               <td>
               <input type="text" ng-model="emp_skype_id" ng-required/>
@@ -55,6 +56,7 @@
               <td>
               Permanent Address
               </td>
+              <td></td>
               <td>
               Current Address
               </td>
@@ -63,6 +65,7 @@
               <td>
               <input type="text" ng-model="permanent_house_name" ng-required/>
               </td>
+              <td></td>
               <td>
               <input type="text" ng-model="current_house_name" ng-required/>
               </td>
@@ -72,6 +75,9 @@
               <input type="text" ng-model="permanent_street_name" ng-required/>
               </td>
               <td>
+              	<img class ="usr_img" src="../assets/images/Button.png" ng-click="copy()"/>  
+              </td>
+              <td>
               <input type="text" ng-model="current_street_name" ng-required/>
               </td>
               </tr>
@@ -79,6 +85,7 @@
               <td>
               <input type="text" ng-model="permanent_city" ng-required/>
               </td>
+              <td></td>
               <td>
               <input type="text" ng-model="current_city" ng-required/>
               </td>
@@ -87,8 +94,22 @@
               <td>
               <input type="text" ng-model="permanent_post_office" ng-required/>
               </td>
+              <td></td>
               <td>
               <input type="text" ng-model="office_post_office" ng-required/>
+              </td>
+              </tr>
+              </table>
+              <h5>Other details</h5>
+              <table>
+              <tr>
+              <td>
+              Alternate email
+              </td>
+              </tr>
+              <tr>
+              <td>
+               <input type="text" ng-model="email" ng-required/>
               </td>
               </tr>
               </table>
@@ -144,6 +165,78 @@
               </td>
               <td>
               <input type="text" ng-model="child_dob" ng-required placeholder="DD/MM/YY"/>
+              </td>
+              <td>
+              <img class ="usr_img" src="../assets/images/add.png" ng-click="add()"/>
+              <img class ="usr_img" src="../assets/images/remove.png" ng-click="remove()" ng-show = "rem"/>    
+              </td>
+              </tr>
+              </table>
+              <table ng-show = "addChild">
+              <tr>
+              <td>
+              Child Name
+              </td>
+              <td>
+              Date of Birth
+              </td>
+              <tr>
+              <td>
+              <input type="text" ng-model="child_name" ng-required/>
+              </td>
+              <td>
+              <input type="text" ng-model="child_dob" ng-required placeholder="DD/MM/YY"/>
+              </td>
+              </tr>
+         </table>
+         <table ng-show = "addChild1">
+              <tr>
+              <td>
+              Child Name
+              </td>
+              <td>
+              Date of Birth
+              </td>
+              <tr>
+              <td>
+              <input type="text" ng-model="child_name1" ng-required/>
+              </td>
+              <td>
+              <input type="text" ng-model="child_dob1" ng-required placeholder="DD/MM/YY"/>
+              </td>
+              </tr>
+         </table>
+         <table ng-show = "addChild2">
+              <tr>
+              <td>
+              Child Name
+              </td>
+              <td>
+              Date of Birth
+              </td>
+              <tr>
+              <td>
+              <input type="text" ng-model="child_name2" ng-required/>
+              </td>
+              <td>
+              <input type="text" ng-model="child_dob2" ng-required placeholder="DD/MM/YY"/>
+              </td>
+              </tr>
+         </table>
+         <table ng-show = "addChild3">
+              <tr>
+              <td>
+              Child Name
+              </td>
+              <td>
+              Date of Birth
+              </td>
+              <tr>
+              <td>
+              <input type="text" ng-model="child_name3" ng-required/>
+              </td>
+              <td>
+              <input type="text" ng-model="child_dob3" ng-required placeholder="DD/MM/YY"/>
               </td>
               </tr>
          </table>
