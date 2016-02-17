@@ -4,11 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Space - Dashboard</title>
+    <script type="text/javascript" src="assets/js/lib/angular.min.js"></script>
+    <script type="text/javascript" src="assets/js/lib/angular-route.js"></script>
+    <script type="text/javascript" src="routes/route.js"></script>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="assets/stylesheets/commonstyle.css">
+    <script type="text/javascript" src="controllers/statuscontroller.js"></script>
 </head>
 
-<body>
+<body ng-app="mainApp">
     <div id="content_wrapper">
         <header id="space_head">
             <ul class="unstyled">
@@ -34,12 +38,12 @@
                 <li>
                     <div id="nav_profile">
                         <img src="assets/images/profile.jpg" alt="" id="profile_pic">
-                        <p id="profile_name">Anees</p>
+                        <p id="profile_name">Name</p>
                     </div>
                 </li>
                 <li class="nav_item"><a href="index.html"><i class="fa fa-home fa-2x nav_icon"></i>Dashboard</a></li>
                 <li class="nav_item">
-                    <a href="views/employeeview.html">
+                    <a href="#employee">
                         <img src="assets/images/employee.png" class="nav_icon">Employee
                     </a>
                 </li>
@@ -59,7 +63,7 @@
                     </a>
                 </li>
                 <li class="nav_item">
-                    <a href="views/dailystatus.html">
+                    <a href="#dailystatus">
                         <i class="fa fa-file-text fa-2x nav_icon"></i>Daily Status
                     </a>
                 </li>
@@ -70,6 +74,11 @@
                 </li>
             </ul>
         </nav>
+        <main>
+        	<div ng-view class="partial">
+        		
+        	</div>
+        </main>
     </div>
 </body>
 
