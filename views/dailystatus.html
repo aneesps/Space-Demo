@@ -11,10 +11,8 @@
         
         <div class="status_item">
         <label for="projects">Projects:</label>
-        <select name="projects" id="project" ng-model="project">
-            <option value="abc">abc</option>
-            <option value="xyz">xyz</option>
-            <option value="qwe">qwe</option>
+        <select name="projects" id="project" ng-model="project">            
+            <option value="{{project.value}}" ng-repeat="project in projects">{{project.name}}</option>
         </select>
         </div>
         <div class="status_item">
@@ -41,16 +39,18 @@
         <label for="description">Activity Description:</label>
         <textarea name="description" id="status" cols="30" rows="5" ng-model="report"></textarea>
         </div>
-        <button ng-click="submit()">Save</button>
-        <table class="history_table" ng-repeat="status in statuses">
+        <button id="save_button"ng-click="submit()">Save</button>
+        </div>
+        <div id="history">
+        <table class="history_table" ng-repeat="status in statuses track by $index">
            
             <tr class="history_table_row">
-            	<td>End of day:{{status.date|date:'dd/MM/yyyy'}}</td>
+            	<td>End of day:<br>{{status.date|date:'dd/MM/yyyy'}}</td>
             	<td>{{status.report}}</td>
-            	<td>{{status.hours}}hours {{status.minutes}}minutes<br>{{status.activity}}</td>
+            	<td>{{status.hours}}:{{status.minutes}}hour(s)<br>{{status.activity}}</td>
             </tr>
             <tr class="history_table_row">
-            	<td>Posted On:</td>
+            	<td>Posted On:{{status.todayDate|date:'dd/MM/yyyy'}}<br>{{status.todayDate|date:'HH:mm:ss'}}</td>
             	<td></td>
             	<td>{{status.project}}</td>
             </tr>

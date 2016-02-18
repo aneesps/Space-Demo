@@ -98,8 +98,12 @@ a {
     padding-top: 10px;
 }
 
+
 .nav_item a {
     color: #5D5C5C;
+}
+.nav_item a:hover{
+	color: #000;
 }
 
 .nav_icon {
@@ -110,6 +114,10 @@ a {
 }
 .partial{
 	margin-left: 220px;
+}
+#burst{
+	border: 1px solid #ddd;
+	padding:10px;
 }
 .status_item{
 	display: inline-block;
@@ -147,10 +155,28 @@ a {
 .status_description{
 	padding: 30px 0;
 }
+
+#save_button{
+	color: #fff;
+	width: 50px;
+	height: 30px;
+	background-color: #3276b1;
+	margin-left: 300px;
+}
 .history_table{
+	margin:50px 20px;
 	border: 1px solid lightgrey;
 	border-collapse: collapse;
+
 }
-.history_table_row{
-	width: 300px;
+.history_table td:nth-child(odd){
+	width:150px;
+	font-size: 14px;
+	padding: 15px 10px 0;
+}
+.history_table td:nth-child(even){
+	width: 500px;
+}
+.history_table tr{
+	padding-bottom: 15px;
 }
