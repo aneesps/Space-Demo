@@ -147,3 +147,10 @@ a {
 .status_description{
 	padding: 30px 0;
 }
+.history_table{
+	border: 1px solid lightgrey;
+	border-collapse: collapse;
+}
+.history_table_row{
+	width: 300px;
+}

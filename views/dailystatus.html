@@ -42,14 +42,17 @@
         <textarea name="description" id="status" cols="30" rows="5" ng-model="report"></textarea>
         </div>
         <button ng-click="submit()">Save</button>
-        <table ng-repeat="status in statuses">
-            <tr >
-                <td>{{status.date|date:'dd/MM/yyyy'}}</td>
-                <td>{{status.activity}}</td>
-                <td>{{status.project}}</td>
-                <td>{{status.hours}}</td>
-                <td>{{status.minutes}}</td>
-                <td>{{status.report}}</td>
+        <table class="history_table" ng-repeat="status in statuses">
+           
+            <tr class="history_table_row">
+            	<td>End of day:{{status.date|date:'dd/MM/yyyy'}}</td>
+            	<td>{{status.report}}</td>
+            	<td>{{status.hours}}hours {{status.minutes}}minutes<br>{{status.activity}}</td>
+            </tr>
+            <tr class="history_table_row">
+            	<td>Posted On:</td>
+            	<td></td>
+            	<td>{{status.project}}</td>
             </tr>
         </table>
     </div>
