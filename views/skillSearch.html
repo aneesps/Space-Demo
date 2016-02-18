@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <title>
+            Space-Demo
+        </title>
+          <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    </head>
+    <body ng-app="skillApp" ng-controller="searchskillcontroller">
+    	<input type="text" ng-model="search">
+    	<button id="searchBtn" ng-click="">Search</button>
+    	<div>
+    		<ul>
+    			<li ng-repeat="skills in skillsData ">
+    				<label>{{ skills.name }}</label>
+    				{{ skills.skills  }}
+    			</li>
+    		</ul>
+    	</div>
+    	<script type="text/javascript" src="../controllers/searchskillcontroller.js"></script>
+    </body>
+</html>
