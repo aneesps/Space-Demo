@@ -1,1 +1,84 @@
 
+<head>
+    <meta charset="UTF-8">
+    <title>Space - Dashboard</title>
+    <script type="text/javascript" src="assets/js/lib/angular.min.js"></script>
+    <script type="text/javascript" src="assets/js/lib/angular-route.js"></script>
+    <script type="text/javascript" src="routes/route.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/commonstyle.css">
+    <script type="text/javascript" src="controllers/statuscontroller.js"></script>
+</head>
+
+<body ng-app="mainApp">
+    <div id="content_wrapper">
+        <header id="space_head">
+            <ul class="unstyled">
+                <li class="head_items"><img id="logo" src="assets/images/logo.png" alt=""> </li>
+                <li id="sign_out" class="right_side head_items"><i class="fa fa-sign-out fa-lg head_icon"></i></li>
+                <li class="right_side head_items">
+                    <div id="search_box">
+                        <input id="head_search_field" type="text" placeholder="search">
+                        <i class="fa fa-search head_icon"></i>
+                    </div>
+                </li>
+                <li class="right_side head_items">
+                    <select name="search_items" id="search_items">
+                        <option value="01">Employee</option>
+                        <option value="02">Project</option>
+                        <option value="03">Skill</option>
+                    </select>
+                </li>
+            </ul>
+        </header>
+        <nav id="nav_menu">
+            <ul id="nav_menu_list" class="unstyled">
+                <li>
+                    <div id="nav_profile">
+                        <img src="assets/images/profile.jpg" alt="" id="profile_pic">
+                        <p id="profile_name">Name</p>
+                    </div>
+                </li>
+                <li class="nav_item"><a href="index.html"><i class="fa fa-home fa-2x nav_icon"></i>Dashboard</a></li>
+                <li class="nav_item">
+                    <a href="#employee">
+                        <img src="assets/images/employee.png" class="nav_icon">Employee
+                    </a>
+                </li>
+                <li class="nav_item">
+                    <a href="#vacation">
+                        <i class="fa fa-plane fa-2x nav_icon"></i>Vacation
+                    </a>
+                </li>
+                <li class="nav_item">
+                    <a href="#project">
+                        <i class="fa fa-briefcase fa-2x nav_icon"></i>Project
+                    </a>
+                </li>
+                <li class="nav_item">
+                    <a href="#customer">
+                        <i class="fa fa-book fa-2x nav_icon"></i>Customer
+                    </a>
+                </li>
+                <li class="nav_item">
+                    <a href="#dailystatus">
+                        <i class="fa fa-file-text fa-2x nav_icon"></i>Daily Status
+                    </a>
+                </li>
+                <li class="nav_item">
+                    <a href="#todo">
+                        <i class="fa fa-list fa-2x nav_icon"></i>To Do
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+        	<div ng-view class="partial">
+        		
+        	</div>
+        </main>
+    </div>
+</body>
+
+</html>
+
