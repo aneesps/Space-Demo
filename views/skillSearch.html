@@ -4,19 +4,34 @@
         <title>
             Space-Demo
         </title>
-          <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <link href="../assets/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+        </script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular-filter/0.4.7/angular-filter.js">
+        </script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     </head>
     <body ng-app="skillApp" ng-controller="searchskillcontroller">
-    	<input type="text" ng-model="search">
-    	<button id="searchBtn" ng-click="">Search</button>
-    	<div>
-    		<ul>
-    			<li ng-repeat="skills in skillsData ">
-    				<label>{{ skills.name }}</label>
-    				{{ skills.skills  }}
-    			</li>
-    		</ul>
-    	</div>
-    	<script type="text/javascript" src="../controllers/searchskillcontroller.js"></script>
-    </body>
+        <div id="skillSearch">
+            <input type="text" ng-model="keyword" id="searchInput"/>
+            <button id="searchBtn" ng-click="searchSkill()" class="btn btn-primary">
+                Search
+            </button>
+        </div>
+        <div>
+            <ul>
+                <li ng-repeat="skill in results">
+                    <img ng-src="{{ skill.image }}" />
+                </img>
+                {{ skill.name }}
+                <span ng-repeat="lang in skill.skills">
+                    {{  lang }}
+                </span>
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript" src="../controllers/searchskillcontroller.js">
+    </script>
+</body>
 </html>

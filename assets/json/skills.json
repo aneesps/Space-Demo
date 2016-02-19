@@ -1,27 +1,27 @@
 [
 	{
 		"name"  : "Susan Jacob",
-		"image" : "",
-		"skills" : "javascript,jquery,HTML"
+		"image" : "../assets/images/logo.pn",
+		"skills" : ["javascript","jquery","HTML"]
 	},
 	{
 		"name"  : "Dilipkumar Nallusamy",
-		"image" : "",
-		"skills" : "CSS,.NET,HTML"
+		"image" : "../assets/images/logo.pn",
+		"skills" : ["CSS",".NET","HTML"]
 	},
 	{
 		"name"  : "Praful Thomas",
-		"image" : "",
-		"skills" : "PHP,jquery,HTML,Report Writing"
+		"image" : "../assets/images/logo.pn",
+		"skills" : ["PHP","jquery","HTML","Report Writing"]
 	},
 	{
 		"name"  : "Sudheesh Mohanan",
-		"image" : "",
-		"skills" : "Node.js,Backbone.js,Java"
+		"image" : "../assets/images/logo.pn",
+		"skills" : ["Node.js","Backbone.js","Java"]
 	},
 	{
 		"name"  : "Rohith K P",
-		"image" : "",
-		"skills" : "javascript,jquery,HTML,Python,Flask,Backbone.js,Angular.js,Node.js"
+		"image" : "../assets/images/logo.pn",
+		"skills" : ["javascript","jquery","HTML","Python","Flask","Backbone.js","Angular.js","Node.js"]
 	}
 ]
