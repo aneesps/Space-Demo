@@ -111,3 +111,71 @@ a {
 .partial{
 	margin-left: 220px;
 }
+.partial{
+	margin-left: 220px;
+}
+#burst{
+	border: 1px solid #ddd;
+	padding:10px;
+}
+.status_item{
+	display: inline-block;
+}
+.status_item select{
+	display: block;
+	padding: 5px;
+	margin-right: 30px;
+
+
+}
+#date{
+	width: 150px;
+
+}
+#project{
+	width: 300px;
+}
+#activity{
+	width: 100px;
+}
+#hour,#time{
+	width: 50px;
+	margin-right: 0px;
+}
+.status_time{
+	display: block;
+}
+#minute,#hour{
+	display: inline-block;
+}
+.status_description label{
+	display: block;
+}
+.status_description{
+	padding: 30px 0;
+}
+
+#save_button{
+	color: #fff;
+	width: 50px;
+	height: 30px;
+	background-color: #3276b1;
+	margin-left: 300px;
+}
+.history_table{
+	margin:50px 20px;
+	border: 1px solid lightgrey;
+	border-collapse: collapse;
+
+}
+.history_table td:nth-child(odd){
+	width:150px;
+	font-size: 14px;
+	padding: 15px 10px 0;
+}
+.history_table td:nth-child(even){
+	width: 500px;
+}
+.history_table tr{
+	padding-bottom: 15px;
+}
