@@ -5,9 +5,12 @@ body{
 }
 .prof_view
 {
-	    padding-left: 100px;
-        padding-top: 14px;
-}
+
+	    padding-left: 74px;
+	    	padding-top: 10px;
+
+	    
+	     }
 #header
 {
 	    height: 50px;
@@ -103,4 +106,61 @@ body{
 {
 	color: #6E7995;
     font-weight: bold;
+
+}
+.addr_tab td
+{
+   padding-left: 74px;
+   	padding-top: 10px;
+
+
+}
+.addr_tab th
+{
+	padding-left:102px; 
+	padding-top: 10px;
+}
+.addr_tab img
+{
+	height: 20px;
+	width: 20px;
+}
+.sys_acc th
+{
+	
+padding-left:76px; 
+
+}
+.sys_acc td
+{
+	
+padding-left:20px; 
+
+}
+.dop_acc td
+{
+	padding-left: 74px;
+   	padding-top: 10px;
+}
+.dop_acc th
+{
+	padding-left: 74px;
+}
+.submitBtn
+{
+	    margin-left: 35px;
+        margin-top: 50px;
+        
+}
+.btn-default
+{
+	background-color: aqua !important;
+}
+#submit
+{
+	margin-left: 370px;
+}
+.nav-tabs
+{
+	border-bottom: 0 !important;
 }

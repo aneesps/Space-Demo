@@ -4,12 +4,26 @@
       $http.get("../assets/json/employee.json").success(function(data) {
       	  $scope.count=-0;
           $scope.names = data;
+
+          console.log($scope.names);
           $scope.arra = data[0].basic.split(",");
+          $scope.empname = data[0].name;
+
           $scope.genders = ["male", "female", "..."];
           $scope.blood_groups = ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"];
           $scope.saved = localStorage.getItem('employees');
-          
+
+          $scope.able = true
+          $scope.d_able = function(){
+          	$scope.able= false;
+            $scope.rem = true;
+            $scope.sho=true;
+
+          }
+
           $scope.emp_array = eval($scope.saved);
+          console.log($scope.emp_array);
+    
           
           $scope.submit = function() {
               $scope.names.push({
@@ -40,21 +54,25 @@
               });
               localStorage.setItem('employees', JSON.stringify($scope.names));
           }
-               $scope.copy = function() {             
-                  $scope.current_house_name=$scope.permanent_house_name;                
-                  $scope.current_street_name= $scope.permanent_street_name;            
-                  $scope.current_city= $scope.permanent_city;                 
-                  $scope.office_post_office=$scope.permanent_post_office;
+
+               $scope.cop = function(){             
+                  $scope.current_house_name = $scope.permanent_house_name;                
+                  $scope.current_street_name = $scope.permanent_street_name;            
+                  $scope.current_city = $scope.permanent_city;                 
+                  $scope.office_post_office = $scope.permanent_post_office;
           }
                $scope.addChild = false;
                $scope.addChild1 = false;
                $scope.addChild2 = false;
                $scope.addChild3 = false;
                $scope.rem = false;
-               $scope.add =function(){
+
+               $scope.hide= false;
+               $scope.sho=false;
+               $scope.add = function(){
                	
                	$scope.count = $scope.count + 1;
-               	$scope.rem = true;
+               	$scope.hide = true;
 
                	if($scope.count == "1"){
                	$scope.addChild = true;
@@ -69,24 +87,26 @@
                	$scope.addChild3 = true;
                   }
                 }
-            $scope.remove = function(){
-            	
-            	if($scope.count >= "3")
-            	{
+
+            $scope.remove = function()
+            {
+
                $scope.addChild = false;
                $scope.addChild1 = false;
                $scope.addChild2 = false;
                $scope.addChild3 = false;
-               $scope.rem = false;
+
+               $scope.hide = false;
                $scope.count = 0;
+               }    
+           $scope.save = function()
+           {
+             $scope.rem = false;
+              $scope.able = true;
 
-            	}
 
 
-               	
-
-
-            }    
+           }    
 
 
 

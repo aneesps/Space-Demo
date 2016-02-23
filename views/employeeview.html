@@ -33,7 +33,8 @@
             	</li>
 
             </div>
-            <div ng-repeat="item in names" >
+
+            <div >
             <div id ="prof_header">
             <div id ="basic" >
             <div class="bas_img">
@@ -54,55 +55,297 @@
 
             </div>	
             </div>
-            <a class = "label_view" href="employeedit.html"> View public profile </a> 
-             <a class = "edit" href="#">edit</a> 
+
+            <a class = "label_view" href="#"> View public profile </a> 
+             <a class = "edit" href="#" ng-click="d_able()">edit</a> 
             </div>
             <div id ="container">
             <ul class="nav nav-tabs">
               <li class="active"><a data-toggle="tab" href="#profile">Profile</a></li>
               <li><a data-toggle="tab" href="#skill">Skill</a></li>
             </ul>
+
+        
             <div class="tab-content">
              <div id="profile" class="tab-pane fade in active">
              <h5 class = "tab_head"> Basic information </h5> 
-                 <table ng-repeat="item in names">
+             <form ng-submit="submit()" name="edit_employee" id="edit" novalidate>
+                 <table >
                     
                      <tr >
                         <td class ="prof_view">
-                            <label class="tab_name">Name</label> : {{item.name}}
+                            <label> Name : </label> <input class="tab_name" type = "text" ng-model="empname" ng-disabled ="able">
                         </td>
                         <td class ="prof_view">
-                          <label class="tab_name">Type</label> :  {{ item.type}}
+                          <label class="tab_name">Type</label> :  {{names[0].type}}
                         </td>
                         <td class ="prof_view">
-                        <label class="tab_name">Status</label> :  {{ item.status}}
+                        <label class="tab_name">Status</label> :  {{ names[0].status}}
                         </td>
                         <td class ="prof_view">
-                        <label class="tab_name">Employment Mode</label> :  {{ item.mode}}
+                        <label class="tab_name">Employment Mode</label> :  {{ names[0].mode}}
                         </td>
                     </tr>
                      <tr >
                         <td class ="prof_view">
-                            <label class="tab_name">Designation</label> : {{item.designation}}
+
+                            <label class="tab_name">Designation</label> : {{names[0].designation}}
                         </td>
                         <td class ="prof_view">
-                          <label class="tab_name">Department</label> :{{ item.department}}
+                          <label class="tab_name">Department</label> :{{ names[0].department}}
                         </td>
                         <td class ="prof_view">
-                        <label class="tab_name">Grade</label> :  {{ item.grade}}
+                        <label class="tab_name">Grade</label> :  {{ names[0].grade}}
                         </td>
                         <td class ="prof_view">
-                        <label class="tab_name">Date</label> :  {{ item.joiningdate}}
+                        <label class="tab_name">Date</label> :  {{ names[0].joiningdate}}
                         </td>
                     </tr>
                 </table>
 
-                <h5 class = "tab_head"> Contact Information</h5>
-                <h5 class = "tab_head"> Other Information</h5>
-                <h5 class = "tab_head"> Family Details</h5>
 
+
+                <h5 class = "tab_head"> Contact Information</h5>
+                <table class = "addr_tab">
+                <tr>
+                <th > Permanent Address : </th>
+                <th></th>
+                <th > Current Adress :</th>
+                </tr>
+                <tr>
+              <td>
+              <input type="text" ng-model="permanent_house_name" ng-required/  ng-disabled ="able">
+              </td>
+              <td></td>
+              <td>
+              <input type="text" ng-model="current_house_name" ng-required/ ng-disabled ="able">
+              </td>
+              </tr>
+              <tr>
+              <td>
+              <input type="text" ng-model="permanent_street_name" ng-required/ ng-disabled ="able">
+              </td>
+            <!--   <td></td> -->
+              <td>
+                <img class ="usr_img" src="../assets/images/Button.png" ng-click="cop()" ng-show = "rem"/ ng-disabled ="able">  
+              </td>
+              <td>
+              <input type="text" ng-model="current_street_name" ng-required/ ng-disabled ="able">
+              </td>
+              </tr>
+              <tr>
+              <td>
+              <input type="text" ng-model="permanent_city" ng-required/ ng-disabled ="able">
+              </td>
+              <td></td>
+              <td>
+              <input type="text" ng-model="current_city" ng-required/ ng-disabled ="able">
+              </td>
+              </tr>
+              <tr>
+              <td>
+              <input type="text" ng-model="permanent_post_office" ng-required/ ng-disabled ="able">
+              </td>
+              <td></td>
+              <td>
+              <input type="text" ng-model="office_post_office" ng-required/ ng-disabled ="able">
+              </td>
+              </tr>
+                 </table>
+
+                <h5 class = "tab_head"> System Access Details</h5>
+                 <table class = "sys_acc">
+              <tr>
+              <th>
+              Alternate email
+              </th>
+              <td>
+               <input type="text" ng-model="email" ng-required/ ng-disabled ="able">
+              </td>
+              <th>
+              External Access : 
+              </tr>
+              </table>
+                <h5 class = "tab_head"> Family Details</h5>
+                <table  class = "addr_tab">
+              <tr>
+              <th>
+             Father's Name
+              </th>
+              </tr>
+              <tr>
+              <td>
+              <input type="text" ng-model="father_name" ng-required/ ng-disabled ="able">
+              </td>
+              </tr>
+              <tr>
+              <th>
+              Mother's Name
+              </th>
+              </tr>
+              <tr>
+              <td>
+              <input type="text" ng-model="mother_name" ng-required/ ng-disabled ="able">
+              </td>
+              </tr>
+              <tr>
+              <th>
+              Spouse Name
+              </th>
+              <th>
+              Date of Birth
+              </th>
+              </tr>
+              <tr>
+              <td>
+              <input type="text" ng-model="spouse_name" ng-required / ng-disabled ="able">
+              </td>
+              <td>
+              <input type="text" ng-model="spouse_dob" ng-required placeholder="DD/MM/YY"/ ng-disabled ="able">
+              </td>
+              </tr>
+              <tr>
+              <th>
+              Child Name
+              </th>
+              <th>
+              Date of Birth
+              </th>
+              </tr>
+              <tr>
+              <td>
+              <input type="text" ng-model="child_name" ng-required/ ng-disabled ="able">
+              </td>
+              <td>
+              <input type="text" ng-model="child_dob" ng-required placeholder="DD/MM/YY"/ ng-disabled ="able">
+              </td>
+              <td>
+              <img class ="usr_img" src="../assets/images/add.png" ng-click="add()" ng-show = "sho"/>
+              <img class ="usr_img" src="../assets/images/remove.png" ng-click="remove()" ng-show = "hide"/>    
+              </td>
+              </tr>
+              </table>
+              <table ng-show = "addChild"  class = "addr_tab">
+              <tr>
+              <th>
+              Child Name
+              </th>
+              <th>
+              Date of Birth
+              </th>
+              <tr>
+              <td>
+              <input type="text" ng-model="child_name" ng-required/>
+              </td>
+              <td>
+              <input type="text" ng-model="child_dob" ng-required placeholder="DD/MM/YY"/>
+              </td>
+              </tr>
+         </table>
+         <table ng-show = "addChild1"  class = "addr_tab">
+              <tr>
+              <th>
+              Child Name
+              </th>
+              <th>
+              Date of Birth
+              </th>
+              <tr>
+              <td>
+              <input type="text" ng-model="child_name1" ng-required/>
+              </td>
+              <td>
+              <input type="text" ng-model="child_dob1" ng-required placeholder="DD/MM/YY"/>
+              </td>
+              </tr>
+         </table>
+         <table ng-show = "addChild2"  class = "addr_tab">
+              <tr>
+              <td>
+              Child Name
+              </td>
+              <td>
+              Date of Birth
+              </td>
+              <tr>
+              <td>
+              <input type="text" ng-model="child_name2" ng-required/>
+              </td>
+              <td>
+              <input type="text" ng-model="child_dob2" ng-required placeholder="DD/MM/YY"/>
+              </td>
+              </tr>
+         </table>
+         <table ng-show = "addChild3"  class = "addr_tab">
+              <tr>
+              <td>
+              Child Name
+              </td>
+              <td>
+              Date of Birth
+              </td>
+              <tr>
+              <td>
+              <input type="text" ng-model="child_name3" ng-required/>
+              </td>
+              <td>
+              <input type="text" ng-model="child_dob3" ng-required placeholder="DD/MM/YY"/>
+              </td>
+              </tr>
+         </table>
+         <h5 class = "tab_head">Other Details</h5>
+         <table class="dop_acc">
+             <tr>
+              <th>
+              Nationality
+              </th>
+              <th>
+              Date of Birth[official]
+              </th>
+              <th>
+              Date of Birth[Alternate]
+              </th>
+              </tr>
+               <tr>
+            <td>
+              <input type="text" ng-model="nationality" ng-required/ ng-disabled ="able">
+              </td>
+              <td>
+              <input type="text" ng-model="dob_official" ng-required placeholder="DD/MM/YY"/ ng-disabled ="able">
+              </td>
+              <td>
+              <input type="text" ng-model="dob_alternate" ng-required placeholder="DD/MM/YY"/ ng-disabled ="able">
+              </td>
+              </tr>
+              <tr>
+              <th>
+              Gender
+              </th>
+              <th>
+              Blood Group
+              </th>
+              </tr>
+           
+              <tr>
+              <td>
+                  <select ng-model="gender" ng-options="item for item in genders" ng-required  ng-disabled ="able">
+                  </select>
+              </td>
+              <td>
+                  <select ng-model="blood_group" ng-options="item for item in blood_groups" ng-required ng-disabled ="able">
+                  </select>
+              </td>
+              </tr>
+
+         </table>
+         <div id ="submit"> 
+            <input type="submit" value="save" class="submitBtn btn btn-default" ng-show = "rem" ng-click = "save()">
+           <input type="submit" value="cancel" class="submitBtn btn btn-default" ng-show = "rem" >
+           </div>
+         </form>
 
              </div>
+             <div></div>
                <div id="skill" class="tab-pane fade">
                </div>
             </div>   
